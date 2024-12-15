@@ -26,7 +26,7 @@ service_mapping = {
 output_file_path_final = 'final_service_metrics.xlsx'
 output_file_path_limit_cpu = 'CPU_limit_per_pod.xlsx'
 last_timestamp = pd.Timestamp('04:25:36.519536972')
-end_timestamp_define = pd.Timestamp('09:45:00')  
+end_timestamp_define = pd.Timestamp('05:30:00')  
 
 # Load the scaler
 scaler = joblib.load('scaler.pkl')

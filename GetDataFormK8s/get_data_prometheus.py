@@ -3,7 +3,7 @@ import pandas as pd
 import time
 from datetime import datetime, timedelta
 
-PROMETHEUS_URL = "http://localhost:9090/api/v1/query_range"
+PROMETHEUS_URL = "http://10.1.32.41:9090/api/v1/query_range"
 QUERY = 'sum(rate(container_cpu_usage_seconds_total[5m])) by (service)'
 
 # List services

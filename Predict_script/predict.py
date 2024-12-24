@@ -26,7 +26,7 @@ service_mapping = {
 output_file_path_final = 'final_service_metrics.xlsx'
 output_file_path_limit_cpu = 'CPU_limit_per_pod.xlsx'
 last_timestamp = pd.Timestamp('04:25:36.519536972')
-end_timestamp_define = pd.Timestamp('05:30:00')  
+end_timestamp_define = pd.Timestamp('11:30:00')  
 
 # Load the scaler
 scaler = joblib.load('scaler.pkl')
@@ -69,7 +69,7 @@ def predict_future_resources(last_timestamp, end_timestamp, last_values, scaler,
 
     while last_timestamp < end_timestamp:
         # Update to the next timestamp
-        last_timestamp += pd.Timedelta(minutes=1)
+        last_timestamp += pd.Timedelta(minutes=5)
         future_timestamps.append(last_timestamp)
 
         predicted_row = []  # Store predictions for this timestamp
